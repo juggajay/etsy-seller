@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f8f9fa;
+  }
+
+  .mockup {
+    width: 2000px;
+    height: 1500px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+
+  /* ============================================
+     IMAGE 1: HERO / MAIN LISTING IMAGE
+     ============================================ */
+  .hero {
+    background: linear-gradient(135deg, #0f1923 0%, #1a2d45 40%, #2c4a6e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(60,120,186,0.3) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(60,120,186,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero-content {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    z-index: 2;
+    padding: 0 120px;
+  }
+
+  .hero-text {
+    flex: 0 0 650px;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(60,120,186,0.2);
+    border: 1px solid rgba(60,120,186,0.4);
+    color: #7eb3e0;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+
+  .hero-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+
+  .hero-title span {
+    color: #5ba3d9;
+  }
+
+  .hero-subtitle {
+    font-size: 22px;
+    color: #8fa8c4;
+    line-height: 1.6;
+    margin-bottom: 36px;
+  }
+
+  .hero-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero-feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.08);
+    padding: 10px 18px;
+    border-radius: 8px;
+    color: #c4d6e8;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .hero-feature .check {
+    color: #5ba3d9;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .hero-preview {
+    flex: 0 0 700px;
+    position: relative;
+  }
+
+  /* iPad mockup */
+  .ipad-frame {
+    width: 580px;
+    height: 780px;
+    background: #1a1a1a;
+    border-radius: 30px;
+    padding: 30px 25px;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
+    transform: perspective(1200px) rotateY(-8deg) rotateX(3deg);
+    position: relative;
+  }
+
+  .ipad-screen {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Mini invoice inside iPad */
+  .mini-invoice {
+    padding: 24px;
+    font-size: 11px;
+  }
+
+  .mini-header {
+    background: #1B365D;
+    margin: -24px -24px 16px -24px;
+    padding: 20px 24px;
+    position: relative;
+  }
+
+  .mini-header h2 {
+    color: white;
+    font-size: 26px;
+    font-weight: 800;
+  }
+
+  .mini-header .accent-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #3C78BA;
+  }
+
+  .mini-logo {
+    position: absolute;
+    right: 24px;
+    top: 14px;
+    width: 70px;
+    height: 48px;
+    background: #2C5282;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 9px;
+    font-weight: 700;
+  }
+
+  .mini-meta {
+    display: flex;
+    gap: 30px;
+    background: #EDF2F7;
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    font-size: 9px;
+  }
+
+  .mini-meta-item label {
+    display: block;
+    color: #718096;
+    font-weight: 600;
+    font-size: 7px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .mini-meta-item span {
+    color: #1a1a1a;
+    font-weight: 500;
+  }
+
+  .mini-section-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 14px;
+  }
+
+  .mini-section {
+    flex: 1;
+  }
+
+  .mini-section-label {
+    display: inline-block;
+    background: #1B365D;
+    color: white;
+    padding: 3px 10px;
+    font-size: 8px;
+    font-weight: 700;
+    border-radius: 2px;
+    margin-bottom: 6px;
+  }
+
+  .mini-section-label.alt {
+    background: #3C78BA;
+  }
+
+  .mini-field {
+    background: #f7f9fb;
+    height: 16px;
+    border-radius: 2px;
+    margin-bottom: 4px;
+  }
+
+  .mini-field.tall { height: 24px; }
+
+  .mini-table-header {
+    display: flex;
+    background: #1B365D;
+    padding: 6px 10px;
+    border-radius: 3px 3px 0 0;
+    margin-bottom: 2px;
+  }
+
+  .mini-table-header span {
+    color: white;
+    font-size: 7px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .mini-table-header .desc { flex: 3; }
+  .mini-table-header .qty { flex: 1; text-align: center; }
+  .mini-table-header .rate { flex: 1.2; text-align: center; }
+  .mini-table-header .amt { flex: 1.2; text-align: right; }
+
+  .mini-table-row {
+    display: flex;
+    padding: 5px 10px;
+    align-items: center;
+  }
+
+  .mini-table-row:nth-child(even) { background: #f0f4f8; }
+
+  .mini-table-row span {
+    font-size: 9px;
+    color: #2d3748;
+  }
+
+  .mini-table-row .desc { flex: 3; }
+  .mini-table-row .qty { flex: 1; text-align: center; }
+  .mini-table-row .rate { flex: 1.2; text-align: center; }
+  .mini-table-row .amt { flex: 1.2; text-align: right; font-weight: 600; }
+
+  .mini-total-section {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+
+  .mini-total-box {
+    width: 200px;
+  }
+
+  .mini-total-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 10px;
+    font-size: 9px;
+    color: #4a5568;
+  }
+
+  .mini-total-final {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    background: #1B365D;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    border-radius: 3px;
+    margin-top: 4px;
+  }
+
+  /* Floating shadow card effect */
+  .hero-shadow-card {
+    position: absolute;
+    top: 60px;
+    right: -30px;
+    width: 200px;
+    height: 260px;
+    background: #9C4221;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    opacity: 0.7;
+    transform: rotate(6deg);
+  }
+
+  .hero-shadow-card-inner {
+    width: 100%;
+    height: 20px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+
+  /* ============================================
+     IMAGE 2: FEATURES / 4 COLORS
+     ============================================ */
+  .colors-showcase {
+    background: linear-gradient(160deg, #fafbfc 0%, #eef1f5 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+  }
+
+  .colors-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1a202c;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .colors-subtitle {
+    font-size: 22px;
+    color: #718096;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .colors-grid {
+    display: flex;
+    gap: 36px;
+    margin-bottom: 60px;
+  }
+
+  .color-card {
+    width: 380px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+  }
+
+  .color-card-header {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .color-card-header.navy { background: #1B365D; }
+  .color-card-header.forest { background: #1A4731; }
+  .color-card-header.terracotta { background: #9C4221; }
+  .color-card-header.charcoal { background: #2D3748; }
+
+  .color-card-header span {
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+  }
+
+  .color-card-accent {
+    height: 5px;
+  }
+
+  .color-card-accent.navy { background: #3C78BA; }
+  .color-card-accent.forest { background: #34885F; }
+  .color-card-accent.terracotta { background: #D46C2D; }
+  .color-card-accent.charcoal { background: #616F87; }
+
+  .color-card-body {
+    padding: 20px 24px;
+  }
+
+  .color-card-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 4px;
+  }
+
+  .color-card-desc {
+    font-size: 14px;
+    color: #718096;
+  }
+
+  .colors-bottom-features {
+    display: flex;
+    gap: 48px;
+  }
+
+  .bottom-feature {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2d3748;
+  }
+
+  .bottom-feature-icon {
+    width: 48px;
+    height: 48px;
+    background: #1B365D;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    font-weight: 800;
+  }
+
+  /* ============================================
+     IMAGE 3: FORMATS INCLUDED
+     ============================================ */
+  .formats {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 100px;
+    position: relative;
+  }
+
+  .formats::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #3C78BA, #D46C2D, #34885F, #616F87);
+  }
+
+  .formats-title {
+    font-size: 52px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .formats-subtitle {
+    font-size: 22px;
+    color: #8fa8c4;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  .formats-row {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .format-card {
+    width: 400px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 50px 40px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+
+  .format-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 800;
+    color: white;
+  }
+
+  .format-icon.pdf { background: #e53e3e; }
+  .format-icon.sheets { background: #38a169; }
+  .format-icon.word { background: #2b579a; }
+  .format-icon.excel { background: #217346; }
+
+  .format-name {
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 12px;
+  }
+
+  .format-desc {
+    font-size: 16px;
+    color: #8fa8c4;
+    line-height: 1.6;
+  }
+
+  .format-feature-tag {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .format-feature-tag.pdf { background: rgba(229,62,62,0.2); color: #feb2b2; }
+  .format-feature-tag.sheets { background: rgba(56,161,105,0.2); color: #9ae6b4; }
+  .format-feature-tag.word { background: rgba(43,87,154,0.2); color: #a3c4f5; }
+  .format-feature-tag.excel { background: rgba(33,115,70,0.2); color: #9ae6b4; }
+
+  /* ============================================
+     IMAGE 4: AUTO-CALC FEATURE HIGHLIGHT
+     ============================================ */
+  .autocalc {
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 100px;
+    gap: 80px;
+  }
+
+  .autocalc-left {
+    flex: 0 0 700px;
+  }
+
+  .autocalc-badge {
+    display: inline-block;
+    background: #1B365D;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .autocalc-title {
+    font-size: 52px;
+    font-weight: 800;
+    color: #1a202c;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+
+  .autocalc-desc {
+    font-size: 20px;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 36px;
+  }
+
+  .autocalc-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .autocalc-step {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: white;
+    padding: 18px 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+
+  .autocalc-step-num {
+    width: 40px;
+    height: 40px;
+    background: #1B365D;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  .autocalc-step-text {
+    font-size: 17px;
+    color: #2d3748;
+    font-weight: 500;
+  }
+
+  .autocalc-right {
+    flex: 0 0 750px;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  }
+
+  .calc-demo-header {
+    display: flex;
+    background: #1B365D;
+    padding: 10px 16px;
+    border-radius: 8px 8px 0 0;
+    gap: 0;
+  }
+
+  .calc-demo-header span {
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .calc-demo-header .d { flex: 3; }
+  .calc-demo-header .q { flex: 1; text-align: center; }
+  .calc-demo-header .r { flex: 1.3; text-align: center; }
+  .calc-demo-header .a { flex: 1.3; text-align: right; }
+
+  .calc-demo-row {
+    display: flex;
+    padding: 14px 16px;
+    border-bottom: 1px solid #edf2f7;
+    align-items: center;
+  }
+
+  .calc-demo-row:nth-child(even) { background: #f7fafc; }
+
+  .calc-demo-row span {
+    font-size: 15px;
+    color: #2d3748;
+  }
+
+  .calc-demo-row .d { flex: 3; }
+  .calc-demo-row .q { flex: 1; text-align: center; font-weight: 600; }
+  .calc-demo-row .r { flex: 1.3; text-align: center; }
+  .calc-demo-row .a { flex: 1.3; text-align: right; font-weight: 700; color: #1B365D; }
+
+  .calc-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 8px 16px;
+    color: #3C78BA;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .calc-totals {
+    margin-top: 8px;
+    border-top: 3px solid #3C78BA;
+    padding-top: 12px;
+  }
+
+  .calc-total-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    padding: 6px 16px;
+    font-size: 15px;
+    color: #4a5568;
+  }
+
+  .calc-total-row.final {
+    background: #1B365D;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-top: 8px;
+  }
+
+  .calc-glow {
+    display: inline-block;
+    background: rgba(60,120,186,0.1);
+    border: 2px solid #3C78BA;
+    border-radius: 6px;
+    padding: 2px 10px;
+  }
+</style>
+</head>
+<body>
+
+<!-- IMAGE 1: HERO -->
+<div class="mockup hero" id="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge">Premium Template</div>
+      <h1 class="hero-title">Professional<br><span>Invoice</span><br>Template</h1>
+      <p class="hero-subtitle">Fillable PDF with auto-calculating fields.<br>Just type your quantities and rates — totals update instantly.</p>
+      <div class="hero-features">
+        <div class="hero-feature"><span class="check">&#10003;</span> Auto-Calculate Totals</div>
+        <div class="hero-feature"><span class="check">&#10003;</span> 4 Color Options</div>
+        <div class="hero-feature"><span class="check">&#10003;</span> Fillable PDF</div>
+        <div class="hero-feature"><span class="check">&#10003;</span> Google Sheets</div>
+        <div class="hero-feature"><span class="check">&#10003;</span> Word Template</div>
+        <div class="hero-feature"><span class="check">&#10003;</span> Instant Download</div>
+      </div>
+    </div>
+    <div class="hero-preview">
+      <div class="hero-shadow-card">
+        <div class="hero-shadow-card-inner"></div>
+        <div class="hero-shadow-card-inner"></div>
+        <div class="hero-shadow-card-inner"></div>
+        <div class="hero-shadow-card-inner" style="width:60%"></div>
+      </div>
+      <div class="ipad-frame">
+        <div class="ipad-screen">
+          <div class="mini-invoice">
+            <div class="mini-header">
+              <h2>INVOICE</h2>
+              <div class="mini-logo">YOUR<br>LOGO</div>
+              <div class="accent-bar"></div>
+            </div>
+            <div class="mini-meta">
+              <div class="mini-meta-item"><label>Invoice #</label><span>INV-001</span></div>
+              <div class="mini-meta-item"><label>Date</label><span>03/01/2026</span></div>
+              <div class="mini-meta-item"><label>Due Date</label><span>03/31/2026</span></div>
+            </div>
+            <div class="mini-section-row">
+              <div class="mini-section">
+                <div class="mini-section-label">FROM</div>
+                <div class="mini-field"></div>
+                <div class="mini-field tall"></div>
+                <div class="mini-field"></div>
+              </div>
+              <div class="mini-section">
+                <div class="mini-section-label alt">BILL TO</div>
+                <div class="mini-field"></div>
+                <div class="mini-field tall"></div>
+                <div class="mini-field"></div>
+              </div>
+            </div>
+            <div class="mini-table-header">
+              <span class="desc">Description</span>
+              <span class="qty">Qty</span>
+              <span class="rate">Rate</span>
+              <span class="amt">Amount</span>
+            </div>
+            <div class="mini-table-row"><span class="desc">Web Design Services</span><span class="qty">1</span><span class="rate">$2,500.00</span><span class="amt">$2,500.00</span></div>
+            <div class="mini-table-row"><span class="desc">Logo Design</span><span class="qty">1</span><span class="rate">$800.00</span><span class="amt">$800.00</span></div>
+            <div class="mini-table-row"><span class="desc">SEO Setup</span><span class="qty">3</span><span class="rate">$150.00</span><span class="amt">$450.00</span></div>
+            <div class="mini-table-row"><span class="desc">Content Writing</span><span class="qty">5</span><span class="rate">$75.00</span><span class="amt">$375.00</span></div>
+            <div class="mini-total-section">
+              <div class="mini-total-box">
+                <div class="mini-total-row"><span>Subtotal</span><span>$4,125.00</span></div>
+                <div class="mini-total-row"><span>Tax (10%)</span><span>$412.50</span></div>
+                <div class="mini-total-final"><span>TOTAL</span><span>$4,537.50</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- IMAGE 2: 4 COLORS -->
+<div class="mockup colors-showcase" id="colors">
+  <h2 class="colors-title">4 Professional Color Options Included</h2>
+  <p class="colors-subtitle">Choose the perfect color to match your brand identity</p>
+  <div class="colors-grid">
+    <div class="color-card">
+      <div class="color-card-header navy"><span>INVOICE</span></div>
+      <div class="color-card-accent navy"></div>
+      <div class="color-card-body">
+        <div class="color-card-name">Navy</div>
+        <div class="color-card-desc">Classic & Professional</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-card-header forest"><span>INVOICE</span></div>
+      <div class="color-card-accent forest"></div>
+      <div class="color-card-body">
+        <div class="color-card-name">Forest Green</div>
+        <div class="color-card-desc">Natural & Trustworthy</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-card-header terracotta"><span>INVOICE</span></div>
+      <div class="color-card-accent terracotta"></div>
+      <div class="color-card-body">
+        <div class="color-card-name">Terracotta</div>
+        <div class="color-card-desc">Warm & Creative</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-card-header charcoal"><span>INVOICE</span></div>
+      <div class="color-card-accent charcoal"></div>
+      <div class="color-card-body">
+        <div class="color-card-name">Charcoal</div>
+        <div class="color-card-desc">Modern & Sleek</div>
+      </div>
+    </div>
+  </div>
+  <div class="colors-bottom-features">
+    <div class="bottom-feature">
+      <div class="bottom-feature-icon">&#9998;</div>
+      Fillable PDF Fields
+    </div>
+    <div class="bottom-feature">
+      <div class="bottom-feature-icon">&#9889;</div>
+      Auto-Calculate Totals
+    </div>
+    <div class="bottom-feature">
+      <div class="bottom-feature-icon">&#128196;</div>
+      4 Formats Included
+    </div>
+    <div class="bottom-feature">
+      <div class="bottom-feature-icon">&#8595;</div>
+      Instant Download
+    </div>
+  </div>
+</div>
+
+<!-- IMAGE 3: FORMATS -->
+<div class="mockup formats" id="formats">
+  <h2 class="formats-title">4 Formats Included in Every Purchase</h2>
+  <p class="formats-subtitle">Use the format that works best for your workflow</p>
+  <div class="formats-row">
+    <div class="format-card">
+      <div class="format-icon pdf">PDF</div>
+      <div class="format-name">Fillable PDF</div>
+      <div class="format-desc">Interactive form fields with auto-calculating totals. Works in Adobe Reader & Foxit.</div>
+      <div class="format-feature-tag pdf">&#9889; Auto-Calculate Fields</div>
+    </div>
+    <div class="format-card">
+      <div class="format-icon word">W</div>
+      <div class="format-name">Word Template</div>
+      <div class="format-desc">Fully editable in Microsoft Word. Customize fonts, colors, and layout to match your brand.</div>
+      <div class="format-feature-tag word">&#9998; Full Edit Control</div>
+    </div>
+    <div class="format-card">
+      <div class="format-icon excel">X</div>
+      <div class="format-name">Excel Spreadsheet</div>
+      <div class="format-desc">Formula-powered spreadsheet. Auto-calculates totals. Works in Excel and Google Sheets.</div>
+      <div class="format-feature-tag excel">&#128200; Formula-Powered</div>
+    </div>
+    <div class="format-card">
+      <div class="format-icon sheets">G</div>
+      <div class="format-name">Google Sheets</div>
+      <div class="format-desc">Cloud-based spreadsheet with built-in formulas. Edit anywhere, share with your team.</div>
+      <div class="format-feature-tag sheets">&#9729; Cloud-Based</div>
+    </div>
+  </div>
+</div>
+
+<!-- IMAGE 4: AUTO-CALC FEATURE -->
+<div class="mockup autocalc" id="autocalc">
+  <div class="autocalc-left">
+    <div class="autocalc-badge">Key Feature</div>
+    <h2 class="autocalc-title">Auto-Calculating<br>Invoice Fields</h2>
+    <p class="autocalc-desc">No more manual math. Enter quantities and rates — the template does the rest automatically.</p>
+    <div class="autocalc-steps">
+      <div class="autocalc-step">
+        <div class="autocalc-step-num">1</div>
+        <div class="autocalc-step-text">Type your description, quantity, and rate</div>
+      </div>
+      <div class="autocalc-step">
+        <div class="autocalc-step-num">2</div>
+        <div class="autocalc-step-text">Line totals calculate instantly (Qty × Rate)</div>
+      </div>
+      <div class="autocalc-step">
+        <div class="autocalc-step-num">3</div>
+        <div class="autocalc-step-text">Subtotal, tax, and grand total auto-update</div>
+      </div>
+    </div>
+  </div>
+  <div class="autocalc-right">
+    <div class="calc-demo-header">
+      <span class="d">Description</span>
+      <span class="q">Qty</span>
+      <span class="r">Rate ($)</span>
+      <span class="a">Amount</span>
+    </div>
+    <div class="calc-demo-row"><span class="d">Brand Identity Design</span><span class="q">1</span><span class="r">$3,000.00</span><span class="a">$3,000.00</span></div>
+    <div class="calc-demo-row"><span class="d">Business Card Design</span><span class="q">2</span><span class="r">$250.00</span><span class="a">$500.00</span></div>
+    <div class="calc-demo-row"><span class="d">Social Media Kit</span><span class="q">1</span><span class="r">$1,200.00</span><span class="a">$1,200.00</span></div>
+    <div class="calc-demo-row"><span class="d">Letterhead Template</span><span class="q">1</span><span class="r">$400.00</span><span class="a"><span class="calc-glow">$400.00</span></span></div>
+    <div class="calc-demo-row"><span class="d">Email Signature</span><span class="q">3</span><span class="r">$150.00</span><span class="a"><span class="calc-glow">$450.00</span></span></div>
+    <div class="calc-arrow">&#8595; Totals update automatically</div>
+    <div class="calc-totals">
+      <div class="calc-total-row"><span>Subtotal</span><span>$5,550.00</span></div>
+      <div class="calc-total-row"><span>Tax (8%)</span><span>$444.00</span></div>
+      <div class="calc-total-row"><span>Discount</span><span>-$0.00</span></div>
+      <div class="calc-total-row final"><span>TOTAL</span><span>$5,994.00</span></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

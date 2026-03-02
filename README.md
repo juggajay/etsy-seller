@@ -18,7 +18,7 @@ research/           # Market research & demand signals
 
 | # | Product | Status | Price |
 |---|---------|--------|-------|
-| 001 | Auto-Calculate Invoice Template (4 colours, PDF + XLSX) | Built, listing 80% done | $3.49 |
+| 001 | Auto-Calculate Invoice Template (4 colours, PDF + Word + XLSX) | Built, listing ready | $3.49 |
 
 ## Building Products
 
@@ -28,6 +28,7 @@ Each product has generation scripts in `src/`. To rebuild:
 cd products/001-invoice-template/src
 npm install
 node generate-invoice.js    # PDFs
+node generate-word.js       # Word .docx files
 node generate-sheets.js     # XLSX files
 node generate-mockups.js    # Listing mockup PNGs
 ```

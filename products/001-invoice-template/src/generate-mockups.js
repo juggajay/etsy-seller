@@ -21,7 +21,7 @@ async function generateMockups() {
   const mockups = [
     { id: 'hero', filename: '01-hero-main-listing.png' },
     { id: 'colors', filename: '02-four-color-options.png' },
-    { id: 'formats', filename: '03-three-formats-included.png' },
+    { id: 'formats', filename: '03-four-formats-included.png' },
     { id: 'autocalc', filename: '04-auto-calculating-fields.png' },
   ];
 

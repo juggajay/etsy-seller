@@ -1,0 +1,18 @@
+# Built product files (regenerate from src/ scripts)
+**/output/
+*.pdf
+*.xlsx
+*.png
+*.zip
+
+# Node
+node_modules/
+package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp

@@ -1,0 +1,18 @@
+{
+  "productName": "Photography\nInvoice Template",
+  "tagline": "Package pricing & deposit splits for photographers",
+  "colorTheme": "pink",
+  "screenshots": [
+    "products/v2/output/niche-invoices/N4-photography/mockups/001-hero-photography.png",
+    "products/v2/output/niche-invoices/N4-photography/mockups/002-package-pricing.png",
+    "products/v2/output/niche-invoices/N4-photography/mockups/004-four-colours.png",
+    "products/v2/output/niche-invoices/N4-photography/mockups/005-features.png"
+  ],
+  "features": [
+    "Auto-calculating totals",
+    "4 professional colour themes",
+    "Fillable PDF template",
+    "Instant digital download"
+  ],
+  "outputFilename": "N4-photography-invoice"
+}

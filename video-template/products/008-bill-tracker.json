@@ -1,0 +1,18 @@
+{
+  "productName": "Bill & Subscription\nTracker",
+  "tagline": "Never miss a payment or overpay again",
+  "colorTheme": "sage",
+  "screenshots": [
+    "output/mockups/008-bill-tracker/001-hero-sage-green.png",
+    "output/mockups/008-bill-tracker/002-four-colours.png",
+    "output/mockups/008-bill-tracker/003-subscription-audit.png",
+    "output/mockups/008-bill-tracker/005-calendar-view.png"
+  ],
+  "features": [
+    "Auto-calculating formulas",
+    "4 professional colour themes",
+    "Works in Excel & Google Sheets",
+    "Instant digital download"
+  ],
+  "outputFilename": "008-bill-tracker"
+}

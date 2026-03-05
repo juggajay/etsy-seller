@@ -1,0 +1,18 @@
+{
+  "productName": "Invoice Template",
+  "tagline": "Professional invoices that auto-calculate totals",
+  "colorTheme": "navy",
+  "screenshots": [
+    "output/mockups/01-hero-main-listing.png",
+    "output/mockups/02-four-color-variants.png",
+    "output/mockups/03-auto-calculate-closeup.png",
+    "output/mockups/04-four-formats-graphic.png"
+  ],
+  "features": [
+    "Auto-calculating totals",
+    "4 professional colour themes",
+    "Fillable PDF template",
+    "Instant digital download"
+  ],
+  "outputFilename": "001-invoice"
+}

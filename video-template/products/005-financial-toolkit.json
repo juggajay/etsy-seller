@@ -1,0 +1,18 @@
+{
+  "productName": "Financial Toolkit\nBundle",
+  "tagline": "Budget, track debt & manage bills — all in one",
+  "colorTheme": "pink",
+  "screenshots": [
+    "output/mockups/005-financial-toolkit/001-hero-bundle.png",
+    "products/006-budget-planner/mockups/001-hero-dashboard-pink.png",
+    "products/v2/mockups/007-debt-payoff-tracker/001-hero-dashboard.png",
+    "output/mockups/008-bill-tracker/001-hero-sage-green.png"
+  ],
+  "features": [
+    "3 spreadsheet products included",
+    "Save money with the bundle",
+    "4 professional colour themes",
+    "Instant digital download"
+  ],
+  "outputFilename": "005-financial-toolkit"
+}

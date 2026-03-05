@@ -1,13 +1,22 @@
-# Built product files (regenerate from src/ scripts)
+# Built product files (regenerate from scripts)
 **/output/
 *.pdf
 *.xlsx
 *.png
 *.zip
+*.mp4
 
 # Node
 node_modules/
 package-lock.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Fonts (large binaries — install separately)
+fonts/
 
 # OS
 .DS_Store

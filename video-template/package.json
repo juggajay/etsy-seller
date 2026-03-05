@@ -1,0 +1,25 @@
+{
+  "name": "filesmart-video-template",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "node scripts/render.mjs",
+    "prepare-assets": "node scripts/prepare-assets.mjs"
+  },
+  "dependencies": {
+    "remotion": "^4.0.0",
+    "@remotion/cli": "^4.0.0",
+    "@remotion/renderer": "^4.0.0",
+    "@remotion/bundler": "^4.0.0",
+    "@remotion/fonts": "^4.0.0",
+    "@remotion/transitions": "^4.0.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "sharp": "^0.33.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/react": "^18.3.0"
+  }
+}

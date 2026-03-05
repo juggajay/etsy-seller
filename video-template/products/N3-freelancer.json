@@ -1,0 +1,18 @@
+{
+  "productName": "Freelancer\nInvoice Template",
+  "tagline": "Hourly rates, project fees & payment terms sorted",
+  "colorTheme": "pink",
+  "screenshots": [
+    "products/v2/output/niche-invoices/N3-freelancer/mockups/001-hero-freelancer.png",
+    "products/v2/output/niche-invoices/N3-freelancer/mockups/002-hourly-calc.png",
+    "products/v2/output/niche-invoices/N3-freelancer/mockups/004-four-colours.png",
+    "products/v2/output/niche-invoices/N3-freelancer/mockups/005-features.png"
+  ],
+  "features": [
+    "Auto-calculating totals",
+    "4 professional colour themes",
+    "Fillable PDF template",
+    "Instant digital download"
+  ],
+  "outputFilename": "N3-freelancer-invoice"
+}

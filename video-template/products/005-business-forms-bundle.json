@@ -1,0 +1,18 @@
+{
+  "productName": "Business Forms\nBundle",
+  "tagline": "Invoice, Quote & Receipt — all in one package",
+  "colorTheme": "navy",
+  "screenshots": [
+    "output/mockups/01-hero-main-listing.png",
+    "output/mockups/002-quote/01-hero-quote-template.png",
+    "output/mockups/004-receipt/01-hero-receipt.png",
+    "output/mockups/003-bundle/02-whats-included.png"
+  ],
+  "features": [
+    "Invoice + Quote + Receipt included",
+    "Save money with the bundle",
+    "4 professional colour themes",
+    "Instant digital download"
+  ],
+  "outputFilename": "005-business-forms-bundle"
+}

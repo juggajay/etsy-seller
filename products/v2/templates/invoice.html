@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=816">
+  <title>Invoice Template</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page page-template">
+
+  <!-- ===== HEADER ===== -->
+  <div class="template-header">
+    <div class="header-left">
+      <div class="logo-placeholder">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--muted)">
+          <rect x="3" y="3" width="18" height="18" rx="3"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <path d="M21 15l-5-5L5 21"/>
+        </svg>
+        <span class="logo-text">Your Logo</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <h1 class="doc-title">INVOICE</h1>
+      <div class="meta-fields">
+        <div class="meta-row">
+          <span class="meta-label">Invoice #</span>
+          <div data-field="invoice_number" class="field-placeholder meta-field"></div>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Date</span>
+          <div data-field="invoice_date" class="field-placeholder meta-field"></div>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Due Date</span>
+          <div data-field="due_date" class="field-placeholder meta-field"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accent-line"></div>
+
+  <!-- ===== CONTACT INFO ===== -->
+  <div class="contact-grid">
+    <!-- FROM -->
+    <div class="contact-section">
+      <div class="section-badge">FROM</div>
+      <div class="contact-fields">
+        <span class="contact-field-label">Business Name</span>
+        <div data-field="from_company" class="field-placeholder field-company"></div>
+        <span class="contact-field-label">Address</span>
+        <div data-field="from_address" class="field-placeholder field-address"></div>
+        <span class="contact-field-label">Email</span>
+        <div data-field="from_email" class="field-placeholder field-single"></div>
+        <span class="contact-field-label">Phone</span>
+        <div data-field="from_phone" class="field-placeholder field-single"></div>
+      </div>
+    </div>
+    <!-- BILL TO -->
+    <div class="contact-section">
+      <div class="section-badge">BILL TO</div>
+      <div class="contact-fields">
+        <span class="contact-field-label">Client / Company</span>
+        <div data-field="to_company" class="field-placeholder field-company"></div>
+        <span class="contact-field-label">Address</span>
+        <div data-field="to_address" class="field-placeholder field-address"></div>
+        <span class="contact-field-label">Email</span>
+        <div data-field="to_email" class="field-placeholder field-single"></div>
+        <span class="contact-field-label">Phone</span>
+        <div data-field="to_phone" class="field-placeholder field-single"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== LINE ITEMS TABLE ===== -->
+  <div class="items-table">
+    <div class="table-header">
+      <span class="col-desc">Description</span>
+      <span class="col-qty">Qty</span>
+      <span class="col-rate">Rate ($)</span>
+      <span class="col-amount">Amount ($)</span>
+    </div>
+    <!-- Row 1 -->
+    <div class="table-row">
+      <div class="col-desc"><div data-field="desc_1" class="field-placeholder"></div></div>
+      <div class="col-qty"><div data-field="qty_1" class="field-placeholder"></div></div>
+      <div class="col-rate"><div data-field="rate_1" class="field-placeholder"></div></div>
+      <div class="col-amount"><div data-field="amount_1" class="field-placeholder"></div></div>
+    </div>
+    <!-- Row 2 -->
+    <div class="table-row">
+      <div class="col-desc"><div data-field="desc_2" class="field-placeholder"></div></div>
+      <div class="col-qty"><div data-field="qty_2" class="field-placeholder"></div></div>
+      <div class="col-rate"><div data-field="rate_2" class="field-placeholder"></div></div>
+      <div class="col-amount"><div data-field="amount_2" class="field-placeholder"></div></div>
+    </div>
+    <!-- Row 3 -->
+    <div class="table-row">
+      <div class="col-desc"><div data-field="desc_3" class="field-placeholder"></div></div>
+      <div class="col-qty"><div data-field="qty_3" class="field-placeholder"></div></div>
+      <div class="col-rate"><div data-field="rate_3" class="field-placeholder"></div></div>
+      <div class="col-amount"><div data-field="amount_3" class="field-placeholder"></div></div>
+    </div>
+    <!-- Row 4 -->
+    <div class="table-row">
+      <div class="col-desc"><div data-field="desc_4" class="field-placeholder"></div></div>
+      <div class="col-qty"><div data-field="qty_4" class="field-placeholder"></div></div>
+      <div class="col-rate"><div data-field="rate_4" class="field-placeholder"></div></div>
+      <div class="col-amount"><div data-field="amount_4" class="field-placeholder"></div></div>
+    </div>
+    <!-- Row 5 -->
+    <div class="table-row">
+      <div class="col-desc"><div data-field="desc_5" class="field-placeholder"></div></div>
+      <div class="col-qty"><div data-field="qty_5" class="field-placeholder"></div></div>
+      <div class="col-rate"><div data-field="rate_5" class="field-placeholder"></div></div>
+      <div class="col-amount"><div data-field="amount_5" class="field-placeholder"></div></div>
+    </div>
+    <!-- Row 6 -->
+    <div class="table-row">
+      <div class="col-desc"><div data-field="desc_6" class="field-placeholder"></div></div>
+      <div class="col-qty"><div data-field="qty_6" class="field-placeholder"></div></div>
+      <div class="col-rate"><div data-field="rate_6" class="field-placeholder"></div></div>
+      <div class="col-amount"><div data-field="amount_6" class="field-placeholder"></div></div>
+    </div>
+  </div>
+  <div class="table-bottom-accent"></div>
+
+  <!-- ===== TOTALS ===== -->
+  <div class="totals-section">
+    <div class="totals-block">
+      <div class="total-row">
+        <span class="total-label">Subtotal</span>
+        <div data-field="subtotal" class="field-placeholder total-field"></div>
+      </div>
+      <div class="total-row total-row-editable">
+        <span class="total-label">Tax Rate <span class="total-label-small">(%)</span></span>
+        <div data-field="tax_rate" class="field-placeholder total-field"></div>
+      </div>
+      <div class="total-row">
+        <span class="total-label">Tax Amount</span>
+        <div data-field="tax_amount" class="field-placeholder total-field"></div>
+      </div>
+      <div class="total-row total-row-editable">
+        <span class="total-label">Discount <span class="total-label-small">($)</span></span>
+        <div data-field="discount" class="field-placeholder total-field"></div>
+      </div>
+      <div class="total-row total-final">
+        <span class="total-label">TOTAL</span>
+        <div data-field="total" class="field-placeholder total-field"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <div class="footer-section">
+    <div class="footer-block">
+      <span class="footer-label">Payment Terms</span>
+      <div data-field="payment_terms" class="field-placeholder footer-field"></div>
+    </div>
+    <div class="footer-block">
+      <span class="footer-label">Notes</span>
+      <div data-field="notes" class="field-placeholder footer-field"></div>
+    </div>
+    <div class="footer-block footer-block-full">
+      <span class="footer-label">Bank / Payment Details</span>
+      <div data-field="bank_details" class="field-placeholder footer-field-bank"></div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="page-footer-accent-1"></div>
+  <div class="page-footer-accent-2"></div>
+  <div class="page-footer-bar">
+    <span>Professional Invoice Template</span>
+  </div>
+
+</div>
+
+</body>
+</html>

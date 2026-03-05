@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=816">
+  <title>Photography Invoice</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page page-template photography-page">
+
+  <!-- ===== HEADER ===== -->
+  <div class="template-header">
+    <div class="header-left">
+      <div class="logo-placeholder">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--muted)">
+          <rect x="3" y="3" width="18" height="18" rx="3"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <path d="M21 15l-5-5L5 21"/>
+        </svg>
+        <span class="logo-text">Your Logo</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <h1 class="doc-title" style="font-size:28px; margin-bottom:10px;">INVOICE</h1>
+      <div class="meta-fields">
+        <div class="meta-row">
+          <span class="meta-label">Invoice #</span>
+          <div data-field="invoice_number" class="field-placeholder meta-field"></div>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Date</span>
+          <div data-field="invoice_date" class="field-placeholder meta-field"></div>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Due Date</span>
+          <div data-field="due_date" class="field-placeholder meta-field"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accent-line"></div>
+
+  <!-- ===== SESSION DETAILS ===== -->
+  <div class="project-details">
+    <div class="project-field-group" style="flex:2;">
+      <span class="project-label">Session Type</span>
+      <div data-field="session_type" class="field-placeholder project-field project-field-wide"></div>
+    </div>
+    <div class="project-field-group">
+      <span class="project-label">Session Date</span>
+      <div data-field="session_date" class="field-placeholder project-field"></div>
+    </div>
+    <div class="project-field-group">
+      <span class="project-label">Location</span>
+      <div data-field="session_location" class="field-placeholder project-field"></div>
+    </div>
+  </div>
+
+  <!-- ===== CONTACT INFO ===== -->
+  <div class="contact-grid" style="margin-bottom:14px;">
+    <div class="contact-section">
+      <div class="section-badge">FROM</div>
+      <div class="contact-fields">
+        <span class="contact-field-label">Studio / Photographer</span>
+        <div data-field="from_company" class="field-placeholder field-company"></div>
+        <span class="contact-field-label">Address</span>
+        <div data-field="from_address" class="field-placeholder field-address"></div>
+        <span class="contact-field-label">Email</span>
+        <div data-field="from_email" class="field-placeholder field-single"></div>
+        <span class="contact-field-label">Phone</span>
+        <div data-field="from_phone" class="field-placeholder field-single"></div>
+      </div>
+    </div>
+    <div class="contact-section">
+      <div class="section-badge">BILL TO</div>
+      <div class="contact-fields">
+        <span class="contact-field-label">Client / Company</span>
+        <div data-field="to_company" class="field-placeholder field-company"></div>
+        <span class="contact-field-label">Address</span>
+        <div data-field="to_address" class="field-placeholder field-address"></div>
+        <span class="contact-field-label">Email</span>
+        <div data-field="to_email" class="field-placeholder field-single"></div>
+        <span class="contact-field-label">Phone</span>
+        <div data-field="to_phone" class="field-placeholder field-single"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PACKAGE ===== -->
+  <div class="section-label-row">
+    <span class="section-label-text">SESSION PACKAGE</span>
+  </div>
+  <div class="items-table compact-table">
+    <div class="table-header compact-header">
+      <span class="col-desc">Package Description</span>
+      <span class="col-qty"># Photos</span>
+      <span class="col-amount">Price ($)</span>
+    </div>
+    <div class="table-row compact-row">
+      <div class="col-desc"><div data-field="package_desc" class="field-placeholder"></div></div>
+      <div class="col-qty"><div data-field="package_photos" class="field-placeholder"></div></div>
+      <div class="col-amount"><div data-field="package_price" class="field-placeholder"></div></div>
+    </div>
+  </div>
+  <div class="table-bottom-accent" style="margin-bottom:4px;"></div>
+
+  <!-- ===== ADD-ONS TABLE ===== -->
+  <div class="section-label-row">
+    <span class="section-label-text">ADD-ONS / EXTRAS</span>
+  </div>
+  <div class="items-table compact-table">
+    <div class="table-header compact-header">
+      <span class="col-desc">Description</span>
+      <span class="col-qty">Qty</span>
+      <span class="col-rate">Rate ($)</span>
+      <span class="col-amount">Amount ($)</span>
+    </div>
+    <div class="table-row compact-row">
+      <div class="col-desc"><div data-field="addon_desc_1" class="field-placeholder"></div></div>
+      <div class="col-qty"><div data-field="addon_qty_1" class="field-placeholder"></div></div>
+      <div class="col-rate"><div data-field="addon_rate_1" class="field-placeholder"></div></div>
+      <div class="col-amount"><div data-field="addon_amount_1" class="field-placeholder"></div></div>
+    </div>
+    <div class="table-row compact-row">
+      <div class="col-desc"><div data-field="addon_desc_2" class="field-placeholder"></div></div>
+      <div class="col-qty"><div data-field="addon_qty_2" class="field-placeholder"></div></div>
+      <div class="col-rate"><div data-field="addon_rate_2" class="field-placeholder"></div></div>
+      <div class="col-amount"><div data-field="addon_amount_2" class="field-placeholder"></div></div>
+    </div>
+    <div class="table-row compact-row">
+      <div class="col-desc"><div data-field="addon_desc_3" class="field-placeholder"></div></div>
+      <div class="col-qty"><div data-field="addon_qty_3" class="field-placeholder"></div></div>
+      <div class="col-rate"><div data-field="addon_rate_3" class="field-placeholder"></div></div>
+      <div class="col-amount"><div data-field="addon_amount_3" class="field-placeholder"></div></div>
+    </div>
+    <div class="table-row compact-row">
+      <div class="col-desc"><div data-field="addon_desc_4" class="field-placeholder"></div></div>
+      <div class="col-qty"><div data-field="addon_qty_4" class="field-placeholder"></div></div>
+      <div class="col-rate"><div data-field="addon_rate_4" class="field-placeholder"></div></div>
+      <div class="col-amount"><div data-field="addon_amount_4" class="field-placeholder"></div></div>
+    </div>
+    <div class="table-row compact-row">
+      <div class="col-desc"><div data-field="addon_desc_5" class="field-placeholder"></div></div>
+      <div class="col-qty"><div data-field="addon_qty_5" class="field-placeholder"></div></div>
+      <div class="col-rate"><div data-field="addon_rate_5" class="field-placeholder"></div></div>
+      <div class="col-amount"><div data-field="addon_amount_5" class="field-placeholder"></div></div>
+    </div>
+  </div>
+  <div class="table-bottom-accent" style="margin-bottom:6px;"></div>
+
+  <!-- ===== BOTTOM SECTION: Deposit + Totals ===== -->
+  <div class="bottom-grid">
+
+    <!-- LEFT: Deposit & Details -->
+    <div class="progress-claim-box">
+      <div class="progress-claim-title">PAYMENT DETAILS</div>
+      <div class="claim-row">
+        <span class="claim-label">Deposit Paid</span>
+        <div data-field="deposit_amount" class="field-placeholder claim-field"></div>
+      </div>
+      <div class="claim-row">
+        <span class="claim-label">Deposit Date</span>
+        <div data-field="deposit_date" class="field-placeholder claim-field"></div>
+      </div>
+      <div class="claim-row">
+        <span class="claim-label">Balance Due Date</span>
+        <div data-field="balance_due_date" class="field-placeholder claim-field"></div>
+      </div>
+      <div class="claim-row">
+        <span class="claim-label">Delivery</span>
+        <div data-field="delivery_timeline" class="field-placeholder claim-field" style="width:60px;"></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Totals -->
+    <div class="totals-section" style="margin-bottom:0;">
+      <div class="totals-block">
+        <div class="total-row compact-total-row">
+          <span class="total-label">Subtotal</span>
+          <div data-field="subtotal" class="field-placeholder total-field"></div>
+        </div>
+        <div class="total-row compact-total-row total-row-editable">
+          <span class="total-label">Tax Rate <span class="total-label-small">(%)</span></span>
+          <div data-field="tax_rate" class="field-placeholder total-field"></div>
+        </div>
+        <div class="total-row compact-total-row">
+          <span class="total-label">Tax Amount</span>
+          <div data-field="tax_amount" class="field-placeholder total-field"></div>
+        </div>
+        <div class="total-row compact-total-row" style="border-bottom: 1px solid var(--border);">
+          <span class="total-label" style="font-weight:600;">Total</span>
+          <div data-field="total" class="field-placeholder total-field"></div>
+        </div>
+        <div class="total-row total-final" style="height:32px; margin-top:4px;">
+          <span class="total-label" style="font-size:11px;">BALANCE DUE</span>
+          <div data-field="balance_due" class="field-placeholder total-field" style="height:22px;"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <div class="footer-section" style="margin-top:10px;">
+    <div class="footer-block">
+      <span class="footer-label">Usage Rights</span>
+      <div data-field="usage_rights" class="field-placeholder footer-field"></div>
+    </div>
+    <div class="footer-block">
+      <span class="footer-label">Payment Info</span>
+      <div data-field="payment_info" class="field-placeholder footer-field"></div>
+    </div>
+    <div class="footer-block">
+      <span class="footer-label">Notes</span>
+      <div data-field="notes" class="field-placeholder footer-field"></div>
+    </div>
+    <div class="footer-block footer-block-full">
+      <span class="footer-label">Bank / Payment Details</span>
+      <div data-field="bank_details" class="field-placeholder footer-field-bank"></div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="page-footer-accent-1"></div>
+  <div class="page-footer-accent-2"></div>
+  <div class="page-footer-bar">
+    <span>Photography Invoice Template</span>
+  </div>
+
+</div>
+
+</body>
+</html>

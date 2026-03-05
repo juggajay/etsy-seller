@@ -1,0 +1,18 @@
+{
+  "productName": "Receipt Template",
+  "tagline": "Professional payment receipts made simple",
+  "colorTheme": "charcoal",
+  "screenshots": [
+    "output/mockups/004-receipt/01-hero-receipt.png",
+    "output/mockups/004-receipt/02-four-color-variants.png",
+    "output/mockups/004-receipt/03-auto-calculate-closeup.png",
+    "output/mockups/004-receipt/04-four-formats-graphic.png"
+  ],
+  "features": [
+    "Auto-calculating totals",
+    "4 professional colour themes",
+    "Fillable PDF template",
+    "Instant digital download"
+  ],
+  "outputFilename": "004-receipt"
+}

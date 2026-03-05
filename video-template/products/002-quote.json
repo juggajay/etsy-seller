@@ -1,0 +1,18 @@
+{
+  "productName": "Quote Template",
+  "tagline": "Win more clients with professional quotes",
+  "colorTheme": "sage",
+  "screenshots": [
+    "output/mockups/002-quote/01-hero-quote-template.png",
+    "output/mockups/002-quote/02-four-color-variants.png",
+    "output/mockups/002-quote/03-auto-calculate-closeup.png",
+    "output/mockups/002-quote/04-four-formats-graphic.png"
+  ],
+  "features": [
+    "Auto-calculating totals",
+    "4 professional colour themes",
+    "Fillable PDF template",
+    "Instant digital download"
+  ],
+  "outputFilename": "002-quote"
+}

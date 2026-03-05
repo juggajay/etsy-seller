@@ -1,0 +1,18 @@
+{
+  "productName": "Debt Payoff\nTracker",
+  "tagline": "Snowball or avalanche — crush your debt faster",
+  "colorTheme": "navy",
+  "screenshots": [
+    "products/v2/mockups/007-debt-payoff-tracker/001-hero-dashboard.png",
+    "products/v2/mockups/007-debt-payoff-tracker/002-four-colours.png",
+    "products/v2/mockups/007-debt-payoff-tracker/003-snowball-vs-avalanche.png",
+    "products/v2/mockups/007-debt-payoff-tracker/004-features.png"
+  ],
+  "features": [
+    "Auto-calculating formulas",
+    "4 professional colour themes",
+    "Works in Excel & Google Sheets",
+    "Instant digital download"
+  ],
+  "outputFilename": "007-debt-tracker"
+}

@@ -1,0 +1,18 @@
+{
+  "productName": "Invoice & Quote\nBundle",
+  "tagline": "Everything you need to bill clients professionally",
+  "colorTheme": "navy",
+  "screenshots": [
+    "output/mockups/003-bundle/01-hero-bundle.png",
+    "output/mockups/003-bundle/02-whats-included.png",
+    "output/mockups/003-bundle/03-save-with-bundle.png",
+    "output/mockups/003-bundle/04-all-templates-colours.png"
+  ],
+  "features": [
+    "Invoice + Quote templates included",
+    "Save money with the bundle",
+    "4 professional colour themes",
+    "Instant digital download"
+  ],
+  "outputFilename": "003-bundle"
+}

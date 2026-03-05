@@ -1,0 +1,18 @@
+{
+  "productName": "Budget Planner\nSpreadsheet",
+  "tagline": "Track income, expenses & savings in one place",
+  "colorTheme": "pink",
+  "screenshots": [
+    "products/006-budget-planner/mockups/001-hero-dashboard-pink.png",
+    "products/006-budget-planner/mockups/002-four-colours.png",
+    "products/006-budget-planner/mockups/003-features.png",
+    "products/006-budget-planner/mockups/004-tab-walkthrough.png"
+  ],
+  "features": [
+    "Auto-calculating formulas",
+    "4 professional colour themes",
+    "Works in Excel & Google Sheets",
+    "Instant digital download"
+  ],
+  "outputFilename": "006-budget-planner"
+}

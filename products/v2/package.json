@@ -1,0 +1,17 @@
+{
+  "name": "etsy-templates-v2",
+  "version": "2.0.0",
+  "description": "Premium fillable business document templates — HTML/CSS + Puppeteer + pdf-lib pipeline",
+  "private": true,
+  "scripts": {
+    "generate:invoice": "node generate-invoice-v2.js",
+    "generate:quote": "node generate-quote-v2.js",
+    "generate:receipt": "node generate-receipt-v2.js",
+    "generate:all": "node generate-invoice-v2.js && node generate-quote-v2.js && node generate-receipt-v2.js",
+    "preview": "npx http-server templates/ -p 3457 -c-1"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1",
+    "puppeteer": "^24.0.0"
+  }
+}
